@@ -12,18 +12,20 @@ using namespace std;
 #define VSORT(v) sort(v.begin(), v.end());
 #define RVISORT(v) sort(v.begin(), v.end(), greater<int>());
 #define ALL(v) v.begin(), v.end()
- 
+
 using VI = vector<int>;
 using VVI = vector<VI>;
 using PII = pair<int, int>;
 using ll = long long;
- 
+
 typedef long long ll;
- 
+
 template<class T, class C> void chmax(T& a, C b){ a>b?:a=b; }
 template<class T, class C> void chmin(T& a, C b){ a<b?:a=b; }
 
+const ll mod=1e9+7;
 int main()
 {
-
+    cin.tie( 0 );
+    ios::sync_with_stdio( false );
 }
