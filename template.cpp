@@ -12,6 +12,9 @@ using namespace std;
 #define VSORT(v) sort(v.begin(), v.end());
 #define RVISORT(v) sort(v.begin(), v.end(), greater<int>());
 #define ALL(v) v.begin(), v.end()
+#define MP(n, m) make_pair(n, m);
+#define COUT(d) cout<<std::setprecision(10)<<d<<endl;
+#define CIN(n) getline(cin,n);
 
 using VI = vector<int>;
 using VVI = vector<VI>;
@@ -99,12 +102,23 @@ map<ll, ll> primeFact(ll n) {
   return res;
 }
 
+void printv(VI& v){
+  REP(i,v.size()) cout << v[i] << " ";
+  cout << endl;
+}
+
+int vtotal(VI& v){
+  int total=0;
+  REP(i,v.size()) total+=v[i];
+  return total;
+}
+
 int main()
 {
   cin.tie( 0 );
   ios::sync_with_stdio( false );
 	
-  //init();
+  //init(); // mint初期化
 
   return 0;
 }
