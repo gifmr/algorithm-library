@@ -1,28 +1,28 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-#define REP(i, n) for (int i = (int)(0); i < (int)(n); ++i)
-#define REPS(i, n) for (int i = (int)(1); i <= (int)(n); ++i)
-#define RREP(i, n) for (int i = ((int)(n)-1); i >= 0; i--)
-#define RREPS(i, n) for (int i = ((int)(n)); i > 0; i--)
-#define IREP(i, m, n) for (int i = (int)(m); i < (int)(n); ++i)
-#define IREPS(i, m, n) for (int i = (int)(m); i <= (int)(n); ++i)
+#define rep(i, n) for (int i = (int)(0); i < (int)(n); ++i)
+#define reps(i, n) for (int i = (int)(1); i <= (int)(n); ++i)
+#define rrep(i, n) for (int i = ((int)(n)-1); i >= 0; i--)
+#define rreps(i, n) for (int i = ((int)(n)); i > 0; i--)
+#define irep(i, m, n) for (int i = (int)(m); i < (int)(n); ++i)
+#define ireps(i, m, n) for (int i = (int)(m); i <= (int)(n); ++i)
 #define FOR(e, c) for (auto &e : c)
 #define SORT(v, n) sort(v, v + n);
-#define VSORT(v) sort(v.begin(), v.end());
-#define RVISORT(v) sort(v.begin(), v.end(), greater<int>());
-#define ALL(v) v.begin(), v.end()
-#define MP(n, m) make_pair(n, m);
-#define COUT(d) cout<<std::setprecision(10)<<d<<endl;
-#define CIN(n) getline(cin,n);
+#define vsort(v) sort(v.begin(), v.end());
+#define rvisort(v) sort(v.begin(), v.end(), greater<int>());
+#define all(v) v.begin(), v.end()
+#define mp(n, m) make_pair(n, m);
+#define coutd(d) cout<<std::setprecision(10)<<d<<endl;
+#define cinline(n) getline(cin,n);
 
-using VI = vector<int>;
-using VVI = vector<VI>;
-using PII = pair<int, int>;
 using ll = long long;
+using vi = vector<int>;
+using vvi = vector<vi>;
+using vll = vector<ll>;
+using vvll = vector<vll>;
+using pii = pair<int, int>;
 using ul = unsigned long;
-
-typedef long long ll;
 
 template<class T, class C> void chmax(T& a, C b){ a>b?:a=b; }
 template<class T, class C> void chmin(T& a, C b){ a<b?:a=b; }
@@ -102,23 +102,25 @@ map<ll, ll> primeFact(ll n) {
   return res;
 }
 
-void printv(VI& v){
-  REP(i,v.size()) cout << v[i] << " ";
+void printv(vi& v){
+  rep(i,v.size()) cout << v[i] << " ";
   cout << endl;
 }
-
-int vtotal(VI& v){
+void printv(vll& v){
+  rep(i,v.size()) cout << v[i] << " ";
+  cout << endl;
+}
+int vtotal(vi& v){
   int total=0;
-  REP(i,v.size()) total+=v[i];
+  rep(i,v.size()) total+=v[i];
   return total;
 }
 
 int main()
 {
+  //init(); // mint初期化
   cin.tie( 0 );
   ios::sync_with_stdio( false );
-	
-  //init(); // mint初期化
 
   return 0;
 }
