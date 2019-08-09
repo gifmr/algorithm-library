@@ -15,6 +15,7 @@ using namespace std;
 #define mp(n, m) make_pair(n, m);
 #define coutd(d) cout<<std::setprecision(10)<<d<<endl;
 #define cinline(n) getline(cin,n);
+#define replace_all(s, b, a) replace(s.begin(),s.end(), b, a);
 
 using ll = long long;
 using vi = vector<int>;
