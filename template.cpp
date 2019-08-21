@@ -25,8 +25,11 @@ using vvll = vector<vll>;
 using pii = pair<int, int>;
 using ul = unsigned long;
 
-template<class T, class C> void chmax(T& a, C b){ a>b?:a=b; }
-template<class T, class C> void chmin(T& a, C b){ a<b?:a=b; }
+template<class T> inline bool chmax(T& a, T b) { if (a < b) { a = b; return 1; } return 0; }
+template<class T> inline bool chmin(T& a, T b) { if (a > b) { a = b; return 1; } return 0; }
+
+int GCD(int a, int b) { return b ? GCD(b, a%b) : a; }
+int LCM(int a, int b) { return a * b / GCD(a, b); }
 
 const int mod=1e9+7;
 
@@ -101,19 +104,6 @@ map<ll, ll> primeFact(ll n) {
   }
   if (n != 1) res[n]++;
   return res;
-}
-
-int gcd(int a, int b){
-  if (a < b) {
-      a ^= b;
-      b ^= a;
-      a ^= b;
-  }
-  return b ? gcd(b, a % b) : a;
-}
-
-int lcm(int a, int b){
-  return a * b / gcd(a, b);
 }
 
 void printv(vi& v){
