@@ -25,27 +25,29 @@ using vvll = vector<vll>;
 using pii = pair<int, int>;
 using ul = unsigned long;
 
+const int INF = 1e9;
+const int MOD = 1e9+7;
+const ll LINF = 1e18;
+
 template<class T> inline bool chmax(T& a, T b) { if (a < b) { a = b; return 1; } return 0; }
 template<class T> inline bool chmin(T& a, T b) { if (a > b) { a = b; return 1; } return 0; }
 
 int GCD(int a, int b) { return b ? GCD(b, a%b) : a; }
 int LCM(int a, int b) { return a * b / GCD(a, b); }
 
-const int mod=1e9+7;
-
 struct mint {
   ll x;
-  mint(ll x=0):x(x%mod){}
+  mint(ll x=0):x(x%MOD){}
   mint& operator+=(const mint a) {
-    if ((x += a.x) >= mod) x -= mod;
+    if ((x += a.x) >= MOD) x -= MOD;
     return *this;
   }
   mint& operator-=(const mint a) {
-    if ((x += mod-a.x) >= mod) x -= mod;
+    if ((x += MOD-a.x) >= MOD) x -= MOD;
     return *this;
   }
   mint& operator*=(const mint a) {
-    (x *= a.x) %= mod;
+    (x *= a.x) %= MOD;
     return *this;
   }
   mint operator+(const mint a) const {
