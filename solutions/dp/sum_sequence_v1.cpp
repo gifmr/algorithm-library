@@ -60,10 +60,9 @@ int main()
   cin.tie( 0 );
   ios::sync_with_stdio( false );
   
-  cin>>n;
+  cin>>n>>K;
   rep(i,n) cin>>a[i];
   rep(i,n) cin>>m[i];
-  cin>>K;
   
   memset(dp, 0, sizeof(dp)); // 全てをfalseに初期化
   dp[0][0]=true; // dp初期化. 0個の整数の和は0とみなせる
