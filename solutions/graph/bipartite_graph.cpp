@@ -85,7 +85,7 @@ int main(){
   
   // solution
   
-  rep(i, V){
+  rep(i, V){ // グラフが連結である場合このループは不要で、一度dfsを呼び出すだけで良い
     if(color[i] == 0){
       if(!dfs(i, 1)){
         cout << "No" << endl;
