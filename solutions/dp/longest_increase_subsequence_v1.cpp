@@ -39,8 +39,8 @@ template<class T> inline bool chmin(T& a, T b) { if (a > b) { a = b; return 1; }
 
 // 最長増加部分列問題
 
-int n; // 数列の長さ
-int a[1005]; // 数列の数
+int n;        // 数列の長さ
+int a[1005];  // 数列の数
 
 // dp[i]:=最後がa[i]であるような最長増加部分列の長さ
 int dp[100005];

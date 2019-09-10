@@ -58,10 +58,10 @@ template<class T> inline bool chmin(T& a, T b) { if (a > b) { a = b; return 1; }
 // [2] dp[j-a[i]]>=0となる場合、dp[j]=dp[j-a[i]]-1
 
 
-int n; // 使用の数の種類
-int K; // 作りたい数
-int a[1005]; // 使用する数
-int m[1005]; // 各数の使える個数
+int n;        // 使用の数の種類
+int K;        // 作りたい数
+int a[1005];  // 使用する数
+int m[1005];  // 各数の使える個数
 
 int dp[100005];
 

@@ -13,7 +13,7 @@ using namespace std;
 
 const int MAXN = 1005;
 
-int par[MAXN]; // 親
+int par[MAXN];  // 親
 int rank[MAXN]; // 木の深さ
 
 // n要素について初期化
