@@ -2,7 +2,7 @@
 using namespace std;
 
 // Binary Index Tree(BIT)
-// 計算量 L(log n)
+// 計算量 O(log n)
 // 次の2つを実現できる
 // (1) a[1]～a[i]の和を求める. 最後の1ビットにより判定を行うため、配列は1から格納する
 // (2) 上記を満たしつつ、a[i] += x の更新を行う
