@@ -75,7 +75,7 @@ int rec(int bit, int v)
     // 答えを格納する変数
     int res = INF;
 
-    // bit の v を除いたもの
+    // bit の v を除いたもの. ~ はビットパターンを反転させる(つまり補数を求める)
     int prev_bit = bit & ~(1<<v);
 
     // v の手前のノードとして u を全探索
