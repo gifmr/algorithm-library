@@ -4,9 +4,27 @@ using namespace std;
 // 素数判定 O(√n)
 bool is_prime(int n){
   for(int i = 2; i * i <= n; i++){
-    if(n % i == 0) return true;
+    if(n % i == 0) return false;
   }
-  return false;
+  return true;
+}
+
+// 素数判定 2の倍数を除外することで高速化
+bool quick_is_prime(int n)
+{
+    if (n < 2) return false;
+    else if (n == 2) return true;
+    else if (n % 2 == 0) return false;
+
+    for (int i = 3; i * i <= n; i += 2)
+    {
+        if (n % i == 0)
+        {
+            return false;
+        }
+    }
+
+    return true;
 }
 
 // 約数列挙 O(√n)
