@@ -38,3 +38,15 @@ There are solutions to some typical problems.
 - search
 
 etc...
+
+## TODO
+
+libraryもしくはsolutionsに追加したいリスト
+
+- [ ] bit DP
+- [ ] 桁DP
+- [ ] next_permutation
+- [ ] 遅延セグ木
+- [ ] 拡張ダイクストラ
+- [ ] 二部マッチング
+- [ ] 何かガルパン関連
