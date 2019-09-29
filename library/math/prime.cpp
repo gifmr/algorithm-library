@@ -68,9 +68,7 @@ map<int, int> prime_factor(int n)
 // 素因数の個数数え上げ
 long long cnt_prime_factor(long long N)
 {
-
   long long res = 0;
-
   for (ll i = 2; i * i <= N; i++)
   {
     if (N % i == 0)
