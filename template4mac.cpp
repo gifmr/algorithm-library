@@ -29,9 +29,11 @@ using namespace std;
 #define rvisort(v) sort(v.begin(), v.end(), greater<int>());
 #define all(v) v.begin(), v.end()
 #define mp(n, m) make_pair(n, m);
+#define cout(d) cout<<d<<endl;
 #define coutd(d) cout<<std::setprecision(10)<<d<<endl;
 #define cinline(n) getline(cin,n);
 #define replace_all(s, b, a) replace(s.begin(),s.end(), b, a);
+#define int long long
 
 using ll = long long;
 using vi = vector<int>;
@@ -52,5 +54,6 @@ int GCD(int a, int b) { return b ? GCD(b, a%b) : a; }
 int LCM(int a, int b) { return a * b / GCD(a, b); }
 
 int main(){
+
     return 0;
 }
