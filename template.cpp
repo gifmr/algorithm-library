@@ -39,8 +39,7 @@ int LCM(int a, int b) { return a * b / GCD(a, b); }
 
 signed main()
 {
-  cin.tie( 0 );
-  ios::sync_with_stdio( false );
+  cin.tie( 0 ); ios::sync_with_stdio( false );
 
   return 0;
 }
