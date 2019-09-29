@@ -41,7 +41,7 @@ etc...
 
 ## TODO
 
-libraryもしくはsolutionsに追加したいリスト
+**libraryもしくはsolutionsに追加したいリスト**
 
 - [ ] bit DP
 - [ ] 桁DP
@@ -50,3 +50,5 @@ libraryもしくはsolutionsに追加したいリスト
 - [ ] 拡張ダイクストラ
 - [ ] 二部マッチング
 - [ ] 何かガルパン関連
+
+**AtCoderやCodeforcesで学びになった問題の解答はこちらにも移したい**
