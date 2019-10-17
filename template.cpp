@@ -18,6 +18,7 @@ using namespace std;
 #define cinline(n) getline(cin,n);
 #define replace_all(s, b, a) replace(s.begin(),s.end(), b, a);
 #define int long long
+#define PI (acos(-1))
 
 using ll = long long;
 using vi = vector<int>;
