@@ -33,6 +33,7 @@ template<class T> inline bool chmax(T& a, T b) { if (a < b) { a = b; return 1; }
 template<class T> inline bool chmin(T& a, T b) { if (a > b) { a = b; return 1; } return 0; }
 
 // ABC141 E - Who Says a Pun?
+// https://atcoder.jp/contests/abc141/tasks/abc141_e
 // 解説: https://www.youtube.com/watch?v=fHZhDUzhzN0
 // dp[i][j]:= iとjを開始地点としたときの最大の連続する部分文字列数(重なる部分についても数える)
 // dp[i][j]は、s[i]==s[j]ならば、dp[i+1][j+1]となる
