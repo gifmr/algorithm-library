@@ -5,6 +5,7 @@ using ll = long long;
 using pll = pair<ll, ll>;
 template<class T> inline bool chmax(T& a, T b) { if (a < b) { a = b; return 1; } return 0; }
 
+// KUPC 2019 F - カズマ王国の陥落
 // https://atcoder.jp/contests/kupc2019/tasks/kupc2019_f
 // 解説: https://pione.hatenablog.com/entry/2019/10/17/193931
 
