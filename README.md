@@ -1,4 +1,4 @@
-# Algorithm Library by piyota
+# Algorithm Library for C++14 by PIONE
 
 ## library
 
