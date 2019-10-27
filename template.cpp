@@ -19,6 +19,7 @@ using namespace std;
 #define replace_all(s, b, a) replace(s.begin(),s.end(), b, a);
 #define int long long
 #define PI (acos(-1))
+#define FILL(v, n, x) fill(v, v + n, x);
 
 using ll = long long;
 using vi = vector<int>;
