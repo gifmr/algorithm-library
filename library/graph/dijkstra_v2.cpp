@@ -10,11 +10,13 @@ using namespace std;
 const int INF = 1e9;
 const int MAXV = 1005;
 
-struct edge { int to, cost; };  // 辺
-typedef pair<int, int> P;       // first: sからの最短距離, second: 頂点番号
-
+// 要初期化
 int V;                          // 頂点数
+struct edge { int to, cost; };  // 辺
 vector<edge> G[MAXV];           // グラフ
+
+
+typedef pair<int, int> P;       // first: sからの最短距離, second: 頂点番号
 int d[MAXV];                    // 頂点sからの最短距離
 
 void dijkstra(int s){
@@ -22,7 +24,7 @@ void dijkstra(int s){
   priority_queue<P, vector<P>, greater<P>> que;
   fill(d, d + V, INF);
   d[s] = 0;
-  que.push(P(s, 0)); // 始点を追加
+  que.push(P(0, s)); // 始点を追加
   
   // whileのイテレーション:1つの頂点について, forのイテレーション:頂点から出る辺について  → while内全体で全ての辺についてのループとなる
   while(!que.empty()){
