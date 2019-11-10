@@ -20,6 +20,7 @@ using namespace std;
 #define int long long
 #define PI (acos(-1))
 #define FILL(v, n, x) fill(v, v + n, x);
+#define sz(x) int(x.size())
 
 using ll = long long;
 using vi = vector<int>;
@@ -29,15 +30,15 @@ using vvll = vector<vll>;
 using pii = pair<int, int>;
 using ul = unsigned long;
 
-const int INF = 1e9;
-const int MOD = 1e9+7;
-const ll LINF = 1e18;
-
 template<class T> inline bool chmax(T& a, T b) { if (a < b) { a = b; return 1; } return 0; }
 template<class T> inline bool chmin(T& a, T b) { if (a > b) { a = b; return 1; } return 0; }
 
 int GCD(int a, int b) { return b ? GCD(b, a%b) : a; }
 int LCM(int a, int b) { return a * b / GCD(a, b); }
+
+const int INF = 1e9;
+const int MOD = 1e9+7;
+const ll LINF = 1e18;
 
 signed main()
 {
