@@ -36,6 +36,13 @@ template<class T> inline bool chmin(T& a, T b) { if (a > b) { a = b; return 1; }
 int GCD(int a, int b) { return b ? GCD(b, a%b) : a; }
 int LCM(int a, int b) { return a * b / GCD(a, b); }
 
+const int dy[] = {0, 1, 0, -1, -1, 1, 1, -1};
+const int dx[] = {1, 0, -1, 0, 1, 1, -1, -1};
+ 
+inline bool inside(int y, int x, int H, int W) {
+    return (y >= 0 && x >= 0 && y < H && x < W);
+}
+
 const int INF = 1e9;
 const int MOD = 1e9+7;
 const ll LINF = 1e18;
