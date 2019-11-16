@@ -38,7 +38,7 @@ int LCM(int a, int b) { return a * b / GCD(a, b); }
 
 const int dy[] = {0, 1, 0, -1, -1, 1, 1, -1};
 const int dx[] = {1, 0, -1, 0, 1, 1, -1, -1};
- 
+
 inline bool inside(int y, int x, int H, int W) {
     return (y >= 0 && x >= 0 && y < H && x < W);
 }
