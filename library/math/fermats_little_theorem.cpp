@@ -11,7 +11,23 @@ using namespace std;
 // a * a^p-2 ≡ 1 (mod p)
 // つまり、a の p-2 乗 (の mod p) が、逆元となる
 
-long long fermat(long long a, long long mod) {
+// 二分累乗法(繰り返し自乗法)による実装 O(log N)
+long long modpow(long long a, long long n, long long mod) {
+  long long res = 1;
+  while (n > 0) {
+    if (n & 1) res = res * a % mod;
+    (a *= a) %= mod;
+    n >>= 1;
+  }
+  return res;
+}
+
+long long modinv(long long a, long long mod) {
+  return modpow(a, mod - 2, mod);
+}
+
+// ナイーブな実装 O(N)
+long long naive_modinv(long long a, long long mod) {
   long long cnt = mod - 2;
   long long res = 1;
   for (int i = 0; i < cnt; i++) {
