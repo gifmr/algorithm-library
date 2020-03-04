@@ -21,6 +21,7 @@ using namespace std;
 #define PI (acos(-1))
 #define FILL(v, n, x) fill(v, v + n, x);
 #define sz(x) int(x.size())
+#define pqasc priority_queue<long long, vector<long long>, greater<long long>>
 
 using ll = long long;
 using vi = vector<int>;
@@ -28,6 +29,7 @@ using vvi = vector<vi>;
 using vll = vector<ll>;
 using vvll = vector<vll>;
 using pii = pair<int, int>;
+using pll = pair<ll, ll>;
 using ul = unsigned long;
 
 template<class T> inline bool chmax(T& a, T b) { if (a < b) { a = b; return 1; } return 0; }
