@@ -9,9 +9,10 @@ using namespace std;
 // フェルマーの小定理の証明の過程で逆元の存在の証明が行われるが、
 // 逆にフェルマーの小定理を利用することで、mod p における a の乗法逆元を求めることができる
 // a * a^p-2 ≡ 1 (mod p)
-// つまり、a の p-2 乗 (の mod p) が、逆元となる
+// つまり、a の p-2 乗 (の mod p) が、mod p における a の乗法逆元となる
 
 // 二分累乗法(繰り返し二乗法)による実装 O(log N)
+// while は n の2進数の桁数だけループする
 long long modpow(long long a, long long n, long long mod) {
   long long res = 1;
   while (n > 0) {
