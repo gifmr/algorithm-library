@@ -11,7 +11,7 @@ using namespace std;
 // a * a^p-2 ≡ 1 (mod p)
 // つまり、a の p-2 乗 (の mod p) が、逆元となる
 
-// 二分累乗法(繰り返し自乗法)による実装 O(log N)
+// 二分累乗法(繰り返し二乗法)による実装 O(log N)
 long long modpow(long long a, long long n, long long mod) {
   long long res = 1;
   while (n > 0) {
