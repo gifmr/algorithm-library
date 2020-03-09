@@ -131,6 +131,12 @@ const int INF = 1e9;
 const int MOD = 1e9+7;
 const ll LINF = 1e18;
 
+long long fact(int a){
+  long long res=1;
+  for(int i=1; i<=a; i++) (res *= i) %= MOD;
+  return res;
+}
+
 signed main()
 {
   cin.tie( 0 ); ios::sync_with_stdio( false );
