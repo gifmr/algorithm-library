@@ -120,6 +120,22 @@ long long modpow(long long a, long long n, long long mod) {
   return res;
 }
 
+const int maxf = 200000;
+long long fact[maxf+5];
+
+void fact_init(int n, long long mod){
+  fact[0] = 1;
+  for(int i=1; i<=n; i++){
+    fact[i] = (fact[i-1] * i) % mod;
+  }
+}
+
+long long comb(long long a, long long b, long long mod){
+  if(a<b || a<0 || b<0) return 0;
+  if(fact[0] == 0) fact_init(maxf, mod);
+  return (fact[a] * modpow((fact[a-b]*fact[b])%mod, mod-2, mod)) % mod;
+}
+
 const int dy[] = {0, 1, 0, -1, -1, 1, 1, -1};
 const int dx[] = {1, 0, -1, 0, 1, 1, -1, -1};
 
@@ -130,12 +146,6 @@ inline bool inside(int y, int x, int H, int W) {
 const int INF = 1e9;
 const int MOD = 1e9+7;
 const ll LINF = 1e18;
-
-long long fact(int a){
-  long long res=1;
-  for(int i=1; i<=a; i++) (res *= i) %= MOD;
-  return res;
-}
 
 signed main()
 {
