@@ -9,6 +9,7 @@ using namespace std;
 #define irep(i, m, n) for (int i = (int)(m); i < (int)(n); ++i)
 #define ireps(i, m, n) for (int i = (int)(m); i <= (int)(n); ++i)
 #define SORT(v, n) sort(v, v + n);
+#define REVERSE(v, n) reverse(v, v+n);
 #define vsort(v) sort(v.begin(), v.end());
 #define all(v) v.begin(), v.end()
 #define mp(n, m) make_pair(n, m);
@@ -147,8 +148,42 @@ const int INF = 1e9;
 const int MOD = 1e9+7;
 const ll LINF = 1e18;
 
+void add(long long& a, long long b) { a = (a+b) % MOD; }
+void mul(long long& a, long long b) { a = (a*b) % MOD; }
+
 signed main()
 {
   cin.tie( 0 ); ios::sync_with_stdio( false );
-  
+  ll n; string s; cin>>n>>s;
+  ll m=n*2;
+  ll ans=1;
+  int k=0;
+  rep(i,m){
+    if(s[i]=='W'){
+      if(k%2==0){
+        if(k==0){
+          cout<<0<<endl;
+          return 0;
+        }
+        (ans*=k)%=MOD;
+        k--;
+      }else{
+        k++;
+      }
+    }else{
+      if(k%2==0){
+        k++;
+      }else{
+        if(k==0){
+          cout<<0<<endl;
+          return 0;
+        }
+        (ans*=k)%MOD;
+        k--;
+      }
+    }
+  }
+  fact_init(n, MOD);
+  if(k>0) cout<<0<<endl;
+  else cout<<(ans*fact[n])%MOD<<endl;
 }
