@@ -1,0 +1,182 @@
+{
+	"cout_yes_no":{
+		"prefix": "yesno",
+		"body":[
+			"if($1) cout<<\"Yes\"<<endl;",
+  		"else cout<<\"No\"<<endl;"
+		]
+	},
+	"priority_queue_asc":{
+		"prefix": "pqasc",
+		"body":[
+			"priority_queue<$1, vector<$1>, greater<$1>>"
+		]
+	},
+	"add_mul":{
+		"prefix": "addmul",
+		"body":[
+			"void add(long long& a, long long b){",
+			"\ta = (a+b) % MOD;",
+			"}",
+			"",
+			"void mul(long long& a, long long b){",
+			"\ta = (a*b) % MOD;",
+			"}"
+		]
+	},
+	"cout_fail":{
+		"prefix": "fail",
+		"body":[
+			"void fail(){",
+			"\tcout << 0 << endl;",
+			"\texit(0);",
+			"}"
+		]
+	},
+	"eratosthenes":{
+		"prefix": "eratos",
+		"body":[
+			"const int MAXN = 100005;",
+			"bool _is_prime[MAXN];",
+			"vector<int> P;",
+			"",
+			"void eratosthenes(const int N)",
+			"{",
+			"\tfor (int i = 0; i <= N; i++) {",
+			"\t\t_is_prime[i] = true;",
+			"\t}",
+			"\t_is_prime[0]=_is_prime[1]=false;",
+			"\tfor (int i = 2; i <= N; i++) {",
+			"\t\tif (_is_prime[i]) {",
+			"\t\t\tfor (int j = 2 * i; j <= N; j += i) {",
+			"\t\t\t\t_is_prime[j] = false;",
+			"\t\t\t}",
+			"\t\t\tP.emplace_back(i);",
+			"\t\t}",
+			"\t}",
+			"}"
+		]
+	},
+	"union-find":{
+		"prefix": "uf",
+		"body":[
+			"class UnionFind{",
+			"private:",
+			"\tvector<int> Parent; ",
+			" public:",
+			"\tUnionFind(int N){",
+			"\t\tParent = vector<int>(N, -1);",
+			"\t}",
+			"\t",
+			"\tint root(int A){",
+			"\t\tif(Parent[A] < 0) return A;",
+			"\t\treturn Parent[A] = root(Parent[A]);",
+			"\t}",
+			"\t",
+			"\tint size(int A){",
+			"\t\treturn -Parent[root(A)]; ",
+			"\t}",
+			"\t",
+			"\tbool connect(int A, int B){",
+			"\t\tA = root(A);",
+			"\t\tB = root(B);",
+			"\t\tif(A == B){",
+			"\t\t\treturn false;",
+			"\t\t}",
+			"\t\tif(size(A) < size(B)) swap(A, B);",
+			"\t\tParent[A] += Parent[B];",
+			"\t\tParent[B] = A;",
+			"\t\treturn true;",
+			"\t}",
+			"\t",
+			"\tbool isSame(int A, int B){",
+			"\t\treturn root(A) == root(B);",
+			"\t}",
+			"};"
+		]
+	},
+	"combination":{
+		"prefix": "comb",
+		"body":[
+			"long long modpow(long long a, long long n, long long mod) {",
+			"\tlong long res = 1;",
+			"\twhile (n > 0) {",
+			"\t\tif (n & 1) res = res * a % mod;",
+			"\t\t(a *= a) %= mod;",
+			"\t\tn >>= 1;",
+			"\t}",
+			"\treturn res;",
+			"}",
+			"",
+			"const int maxf = 10000000;",
+			"long long fact[maxf+5];",
+			"",
+			"void fact_init(int n, long long mod){",
+			"\tfact[0] = 1;",
+			"\tfor(int i=1; i<=n; i++){",
+			"\t\tfact[i] = (fact[i-1] * i) % mod;",
+			"\t}",
+			"}",
+			"",
+			"long long comb(long long a, long long b, long long mod){",
+			"\tif(a<b || a<0 || b<0) return 0;",
+			"\tif(fact[0] == 0) fact_init(maxf, mod);",
+			"\treturn (fact[a] * modpow((fact[a-b]*fact[b])%mod, mod-2, mod)) % mod;",
+			"}"
+		]
+	},
+	"math-tools":{
+		"prefix": "mathtools",
+		"body":[
+			"long long gcd(long long a, long long b) { return b ? gcd(b, a%b) : a; }",
+			"long long lcm(long long a, long long b) { return a / gcd(a, b) * b; }",
+			"",
+			"long long ngcd(vector<long long> a) {",
+			"\tlong long res = a[0];",
+			"\tfor(int i=1; i<a.size() && res!=1; i++) res = gcd(a[i], res);",
+			"\treturn res;",
+			"}",
+			"long long nlcm(vector<long long> a){",
+			"\tlong long res = a[0];",
+			"\tfor(int i=1; i<a.size(); i++) res = lcm(a[i], res);",
+			"\treturn res;",
+			"}",
+			"bool is_prime(long long n) {",
+			"\tif(n < 2) return false;",
+			"\tfor (long long i = 2; i * i <= n; i++) if (n % i == 0) return false;",
+			"\treturn true;",
+			"}",
+			"int digsum(int n) {",
+			"\tint res=0;",
+			"\twhile(n) res += n%10, n /= 10;",
+			"\treturn res;",
+			"}",
+			"int digcnt(int n){",
+			"\tint res=0;",
+			"\twhile(n) res++, n /= 10;",
+			"\treturn res;",
+			"}",
+			"vector<int> divisor(int n) {",
+			"\tvector<int> res;",
+			"\tfor (int i = 1; i * i <= n; i++) {",
+			"\t\tif (n % i == 0) {",
+			"\t\t\tres.push_back(i);",
+			"\t\t\tif (i != n / i) res.push_back(n / i);",
+			"\t\t}",
+			"\t}",
+			"\treturn res;",
+			"}"
+		]	
+	},
+	"graph-tools":{
+		"prefix": "graf",
+		"body":[
+			"const int dy[] = {0, 1, 0, -1, -1, 1, 1, -1};",
+			"const int dx[] = {1, 0, -1, 0, 1, 1, -1, -1};",
+			"",
+			"inline bool inside(int y, int x, int H, int W) {",
+			"\t\treturn (y >= 0 && x >= 0 && y < H && x < W);",
+			"}"
+		]
+	}
+}
