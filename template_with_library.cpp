@@ -154,36 +154,5 @@ void mul(long long& a, long long b) { a = (a*b) % MOD; }
 signed main()
 {
   cin.tie( 0 ); ios::sync_with_stdio( false );
-  ll n; string s; cin>>n>>s;
-  ll m=n*2;
-  ll ans=1;
-  int k=0;
-  rep(i,m){
-    if(s[i]=='W'){
-      if(k%2==0){
-        if(k==0){
-          cout<<0<<endl;
-          return 0;
-        }
-        (ans*=k)%=MOD;
-        k--;
-      }else{
-        k++;
-      }
-    }else{
-      if(k%2==0){
-        k++;
-      }else{
-        if(k==0){
-          cout<<0<<endl;
-          return 0;
-        }
-        (ans*=k)%MOD;
-        k--;
-      }
-    }
-  }
-  fact_init(n, MOD);
-  if(k>0) cout<<0<<endl;
-  else cout<<(ans*fact[n])%MOD<<endl;
+  
 }
