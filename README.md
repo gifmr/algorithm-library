@@ -38,16 +38,3 @@ There are solutions to some typical problems.
 - search
 
 etc...
-
-## TODO
-
-**libraryもしくはsolutionsに追加したいリスト**
-
-- [ ] bit DP
-- [ ] 桁DP
-- [ ] next_permutation
-- [ ] 遅延セグ木
-- [ ] 拡張ダイクストラ
-- [ ] 二部マッチング
-
-**AtCoderやCodeforcesで学びになった問題の実装は順次、solutionsに格納していく**
