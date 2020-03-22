@@ -2,12 +2,12 @@
 using namespace std;
 
 // #define int long long
-#define rep(i, n) for (int i = (int)(0); i < (int)(n); ++i)
-#define reps(i, n) for (int i = (int)(1); i <= (int)(n); ++i)
-#define rrep(i, n) for (int i = ((int)(n)-1); i >= 0; i--)
-#define rreps(i, n) for (int i = ((int)(n)); i > 0; i--)
-#define irep(i, m, n) for (int i = (int)(m); i < (int)(n); ++i)
-#define ireps(i, m, n) for (int i = (int)(m); i <= (int)(n); ++i)
+#define rep(i, n) for (ll i = (ll)(0); i < (ll)(n); ++i)
+#define reps(i, n) for (ll i = (ll)(1); i <= (ll)(n); ++i)
+#define rrep(i, n) for (ll i = ((ll)(n)-1); i >= 0; i--)
+#define rreps(i, n) for (ll i = ((ll)(n)); i > 0; i--)
+#define irep(i, m, n) for (ll i = (ll)(m); i < (ll)(n); ++i)
+#define ireps(i, m, n) for (ll i = (ll)(m); i <= (ll)(n); ++i)
 #define SORT(v, n) sort(v, v + n);
 #define REVERSE(v, n) reverse(v, v+n);
 #define vsort(v) sort(v.begin(), v.end());
@@ -19,7 +19,7 @@ using namespace std;
 #define replace_all(s, b, a) replace(s.begin(),s.end(), b, a);
 #define PI (acos(-1))
 #define FILL(v, n, x) fill(v, v + n, x);
-#define sz(x) int(x.size())
+#define sz(x) ll(x.size())
 
 using ll = long long;
 using vi = vector<int>;
@@ -32,8 +32,8 @@ using pll = pair<ll, ll>;
 template<class T> inline bool chmax(T& a, T b) { if (a < b) { a = b; return 1; } return 0; }
 template<class T> inline bool chmin(T& a, T b) { if (a > b) { a = b; return 1; } return 0; }
 
-const int INF = 1e9;
-const int MOD = 1e9+7;
+const ll INF = 1e15;
+const ll MOD = 1e9+7;
 const ll LINF = 1e18;
 
 signed main()
