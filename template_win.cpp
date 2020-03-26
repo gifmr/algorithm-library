@@ -28,6 +28,8 @@ using vll = vector<ll>;
 using vvll = vector<vll>;
 using pii = pair<int, int>;
 using pll = pair<ll, ll>;
+using vs = vector<string>;
+using vpll = vector<pair<ll, ll>>;
 
 template<class T> inline bool chmax(T& a, T b) { if (a < b) { a = b; return 1; } return 0; }
 template<class T> inline bool chmin(T& a, T b) { if (a > b) { a = b; return 1; } return 0; }
