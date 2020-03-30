@@ -195,6 +195,16 @@ signed main()
     cout<<endl;
   }
   
+  puts("map");
+  {
+    // 存在しない key を指定した場合、map<Key, T> の T() がデフォルト値として返る
+    map<ll, char> m1;
+    if(m1[0]==char()) cout<<"There is not such a key."<<endl;
+    
+    map<ll, ll> m2;
+    if(m2[0]==ll()) cout<<"also"<<endl;
+  }
+  
   puts("tuple");
   {
     tuple<ll,ll,ll> a;
