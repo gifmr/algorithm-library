@@ -30,6 +30,8 @@ using pii = pair<int, int>;
 using pll = pair<ll, ll>;
 using vs = vector<string>;
 using vpll = vector<pair<ll, ll>>;
+using vtp = vector<tuple<ll,ll,ll>>;
+using vb = vector<bool>;
 
 template<class T> inline bool chmax(T& a, T b) { if (a < b) { a = b; return 1; } return 0; }
 template<class T> inline bool chmin(T& a, T b) { if (a > b) { a = b; return 1; } return 0; }
