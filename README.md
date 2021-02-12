@@ -1,4 +1,4 @@
-# Algorithm Library for C++
+# Algorithm Library in CPP
 
 ## これは何?
 
