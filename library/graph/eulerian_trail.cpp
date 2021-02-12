@@ -10,9 +10,11 @@ struct EulerianTrail {
       order[v] = cur;
       cur++;
       for (auto nv : G[v]) {
+        if (nv == p)
+          continue;
         dfs(nv, v);
       }
     };
     dfs(root, -1);
   }
-}
+};
