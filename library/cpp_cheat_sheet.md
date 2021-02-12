@@ -1,6 +1,6 @@
 # C++ cheat sheet
 
-競プロでよく使われるライブラリに関するメモ
+標準ライブラリに関するメモ
 
 ```cpp
 #include <bits/stdc++.h>
