@@ -1,3 +1,14 @@
 *.exe
 *.out
-.vscode/
+*.out
+*.exe
+a.cpp
+b.cpp
+c.cpp
+d.cpp
+e.cpp
+f.cpp
+g.cpp
+problem.in
+problem_out
+memo.md

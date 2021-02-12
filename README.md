@@ -1,40 +1,45 @@
-# Algorithm Library for C++14 by pione
+# Algorithm Library for C++
 
-## library
+## これは何?
 
-### data_stracture
+競技プログラミングで使うアルゴリズムとデータ構造のうち、実装が重い等の理由で、個人的に残しておきたいものをこのRepositoryに置いています。
 
-- binary_index_tree
-- birary_search_tree
-- heap
-- segment_tree_rmq
-- union_find_tree
+### データ構造
 
-### graph_algorithm
+- BIT(Binary-Index-Tree)
+- セグメント木(Segment-Tree)
+  - Range-Minimum-Query用
+  - 抽象化
+- 素集合データ構造(Union-Find-Tree)
+- トライ木(Trie-Tree)
 
-- bellman-ford
-- dijkstra
-- kruskal
-- prim
-- warshall_floyd
+### グラフ系
 
-### math
+- 単一始点最短路(Bellman-Ford)
+- 全点対間最短路(Warshall-Floyd)
+- 最小全域木(Kruskal)
+- 最小全域木(Prim)
+- 最小共通祖先(Lowest-Common-Ancestor)
+- トポロジカルソート(Topological-Sort)
 
-- eratosthenes
-- greatest common divisor / least common multiple
-- mod_int
-- prime-algorithm
+### 数学系
 
-### other
+- エラトステネスの篩(Eratosthenes)
+- 最大公約数(Greatest-Common-Divisor)/最小公倍数(Least-Common-Multiple)
 
-- some utils
+### 文字列検索
 
-## solutions
+- 最長共通接頭辞(Z-Algorithm)
 
-There are solutions to some typical problems.
+### その他
 
-- dp
-- graph
-- search
+- 転倒数(Inversion-Number)
+- 三分探索(Ternary-Search)
 
-etc...
+### 個人的なツール
+
+- 浮動小数を誤差無く10^p倍する
+
+### TODO
+
+- 平衡二分探索木

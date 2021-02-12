@@ -1,35 +1,26 @@
-#include <bits/stdc++.h>
-using namespace std;
+/// @see [https://pione.hatenablog.com/entry/2021/01/31/020037]
+template <typename T>
+class BIT {
+private:
+  int n;
+  vector<T> d;
 
-// Binary Index Tree(BIT)
-// 計算量 O(log n)
-// 次の2つを実現できる
-// (1) a[1]～a[i]の和を求める. 最後の1ビットにより判定を行うため、配列は1から格納する
-// (2) 上記を満たしつつ、a[i] += x の更新を行う
-// 木のノード番号を2進表記にすると、最後の0の個数により区間の長さがわかるようになっている(0個なら長さ1、1個なら長さ2)
+public:
+  BIT(int n = 0) : n(n), d(n + 1) {}
 
-const int MAXN = 1 << 17;
-
-// BITを格納する配列, BITの要素数
-int bit[MAXN + 1], n;
-
-// 区間の和の計算は、iから始めて、最後の1ビットを減算しながら遡っていく
-// 2進数iの最後の1ビットは、i & -i で求められる. これは2の補数(0と1を逆転させた値に1を加えたもの)との論理積を意味する
-// ちなみに、i -= (i & -i) は i = i & (i - 1) に変換可能. i-1により、iの最後の1ビットが1つ下がり、最後の1ビットより上の桁は影響を受けないことを利用している
-int sum(int i){
-  int s = 0;
-  while(i > 0){
-    s += bit[i];
-    i -= i & -i;
+  void add(int i, T x = 1) {
+    for (; i <= n; i += i & -i) {
+      d[i] += x;
+    }
   }
-  return s;
-}
 
-// 和は、iから始めて、最後の1ビットを加算しながら上っていく
-// 元の数列に対して順にaddを呼ぶことでBITを初期化する
-void add(int i, int x){
-  while(i <= n){
-    bit[i] += x;
-    i += i & -i;
+  T sum(int i) {
+    T x = 0;
+    for (; i; i -= i & -i) {
+      x += d[i];
+    }
+    return x;
   }
-}
+
+  T sum(int l, int r) { return sum(r) - sum(l - 1); }
+};

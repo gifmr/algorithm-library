@@ -1,6 +1,3 @@
-#include <bits/stdc++.h>
-using namespace std;
-
 template <class Iterator> bool next_permutation(Iterator first, Iterator last) {
   if (first == last)
     return false;

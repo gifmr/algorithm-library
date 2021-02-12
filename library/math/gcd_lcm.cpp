@@ -1,12 +1,17 @@
-#include <bits/stdc++.h>
-using namespace std;
+long long gcd(long long a, long long b) { return b ? gcd(b, a % b) : a; }
 
-// greatest common divisor (最大公約数)
-int GCD(int a, int b) { return b ? GCD(b, a%b) : a; }
+long long lcm(long long a, long long b) { return a / gcd(a, b) * b; }
 
-// least common multiple (最小公倍数)
-int LCM(int a, int b) { return a  / GCD(a, b) * b; }
+long long ngcd(vector<long long> &a) {
+  long long res = a[0];
+  for (long long i = 1; i < a.size() && res != 1; i++)
+    res = gcd(a[i], res);
+  return res;
+}
 
-// 64bit整数型版
-long long _GCD(long long a, long long b) { return b ? _GCD(b, a%b) : a; }
-long long _LCM(long long a, long long b) { return a / _GCD(a, b) * b; }
+long long nlcm(vector<long long> &a) {
+  long long res = a[0];
+  for (long long i = 1; i < a.size(); i++)
+    res = lcm(a[i], res);
+  return res;
+}
