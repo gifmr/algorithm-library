@@ -21,6 +21,10 @@
 
 using namespace std;
 
+// for AtCoder
+// #include <atcoder/all>
+// using namespace atcoder;
+
 #define rep(i, n) for (long long i = (long long)(0); i < (long long)(n); ++i)
 #define reps(i, n) for (long long i = (long long)(1); i <= (long long)(n); ++i)
 #define irep(i, m, n) for (long long i = (long long)(m); i < (long long)(n); ++i)
