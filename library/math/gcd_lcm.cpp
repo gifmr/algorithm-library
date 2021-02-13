@@ -1,17 +1,17 @@
-long long gcd(long long a, long long b) { return b ? gcd(b, a % b) : a; }
+long long _gcd(long long a, long long b) { return b ? _gcd(b, (a%b+b)%b) : a; }
 
-long long lcm(long long a, long long b) { return a / gcd(a, b) * b; }
+long long _lcm(long long a, long long b) { return a / _gcd(a, b) * b; }
 
 long long ngcd(vector<long long> &a) {
   long long res = a[0];
   for (long long i = 1; i < a.size() && res != 1; i++)
-    res = gcd(a[i], res);
+    res = _gcd(a[i], res);
   return res;
 }
 
 long long nlcm(vector<long long> &a) {
   long long res = a[0];
   for (long long i = 1; i < a.size(); i++)
-    res = lcm(a[i], res);
+    res = _lcm(a[i], res);
   return res;
 }
