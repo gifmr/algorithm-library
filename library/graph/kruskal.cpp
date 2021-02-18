@@ -21,7 +21,7 @@ public:
       long long c;
       int u, v;
       tie(c, u, v) = e;
-      if (!uf.isSame(u, v)) {
+      if (!uf.is_same(u, v)) {
         cost += c;
         uf.connect(u, v);
       }

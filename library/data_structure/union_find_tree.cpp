@@ -1,31 +1,31 @@
 /// @see [https://pione.hatenablog.com/entry/2021/01/24/232508]
 class UnionFind {
 private:
-  vector<int> Parent;
+  vector<int> parent;
 
 public:
-  UnionFind(int N) { Parent = vector<int>(N, -1); }
+  UnionFind(int n) { parent = vector<int>(n, -1); }
 
-  int root(int A) {
-    if (Parent[A] < 0)
-      return A;
-    return Parent[A] = root(Parent[A]);
+  int root(int a) {
+    if (parent[a] < 0)
+      return a;
+    return parent[a] = root(parent[a]);
   }
 
-  int size(int A) { return -Parent[root(A)]; }
+  int size(int a) { return -parent[root(a)]; }
 
-  bool connect(int A, int B) {
-    A = root(A);
-    B = root(B);
-    if (A == B) {
+  bool connect(int a, int b) {
+    a = root(a);
+    b = root(b);
+    if (a == b) {
       return false;
     }
-    if (size(A) < size(B))
-      swap(A, B);
-    Parent[A] += Parent[B];
-    Parent[B] = A;
+    if (size(a) < size(b))
+      swap(a, b);
+    parent[a] += parent[b];
+    parent[b] = a;
     return true;
   }
 
-  bool isSame(int A, int B) { return root(A) == root(B); }
+  bool is_same(int a, int b) { return root(a) == root(b); }
 };
