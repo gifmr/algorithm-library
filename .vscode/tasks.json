@@ -14,6 +14,7 @@
                 "-std=gnu++1y",
                 "-g",
                 "--std=c++17",
+                "-fsanitize=undefined,address",
                 "-O0",
                 "-I/opt/boost/gcc/include",
                 "-I/mnt/c/include/ac-library/",
