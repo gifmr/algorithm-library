@@ -69,15 +69,11 @@ public:
     while (true) {
       itr.assign(n, 0);
       bfs(G, s);
-      if (level[t] < 0)
-        break;
+      if (level[t] < 0) break;
       while (true) {
         T flow = dfs(G, s, t, INF);
-        if (flow > 0) {
-          res += flow;
-        } else {
-          break;
-        }
+        if (flow > 0) res += flow;
+        else break;
       }
     }
     return res;
