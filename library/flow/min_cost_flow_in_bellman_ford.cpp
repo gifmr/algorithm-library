@@ -25,7 +25,7 @@ public:
     G[to].push_back(Edge(from, (int)G[from].size() - 1, 0, -cost));
   }
   
-  cost_t get_min_flow_cost(int s, int t, capacity_t flow) {
+  cost_t get_min_cost_flow(int s, int t, capacity_t flow) {
     int n = G.size();
     cost_t res = 0;
     while (flow > 0) {
