@@ -19,7 +19,7 @@ struct Graph {
   Edge<T> &get_rev(Edge<T> &edge) { return G[edge.to][edge.rev]; }
 };
 
-/// https://pione.hatenablog.com/entry/2021/02/27/061552
+/// @see[https://pione.hatenablog.com/entry/2021/02/27/061552]
 template <class T>
 class Dinic {
 private:

@@ -1,4 +1,4 @@
-/// https://pione.hatenablog.com/entry/2021/02/28/075034
+/// @see[https://pione.hatenablog.com/entry/2021/02/28/075034]
 template <typename capacity_t, typename cost_t>
 class PrimalDual {
 private:
