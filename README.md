@@ -41,6 +41,7 @@
 
 - 転倒数(Inversion-Number)
 - 三分探索(Ternary-Search)
+- 座標圧縮(Compress)
 
 ### 個人的なツール
 
