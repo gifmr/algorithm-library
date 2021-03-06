@@ -21,6 +21,7 @@
 - 最小全域木(Prim)
 - 最小共通祖先(Lowest-Common-Ancestor)
 - トポロジカルソート(Topological-Sort)
+- 強連結成分分解(Strongly-Connected-Components)
 
 #### フロー
 
