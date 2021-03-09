@@ -1,4 +1,5 @@
 struct StronglyConnectedComponents {
+  int n;
   vector<vector<int>> G, rG;
   vector<int> order, component;
   vector<bool> used;
@@ -17,7 +18,7 @@ struct StronglyConnectedComponents {
   }
 
   StronglyConnectedComponents(vector<vector<int>> &_G) {
-    int n = _G.size();
+    n = _G.size();
     G = _G;
     rG.resize(n);
     component.assign(n, -1);
@@ -31,5 +32,22 @@ struct StronglyConnectedComponents {
     for (auto v : order) if (component[v] == -1) rdfs(v, k), k++;
   }
 
+  /// 頂点(u, v)が同じ強連結成分に含まれるか
   bool is_same(int u, int v) { return component[u] == component[v]; }
+
+  /// 強連結成分を1つのノードに潰したグラフを再構築する
+  vector<vector<int>> rebuild() {
+    int N = *max_element(component.begin(), component.end()) + 1;
+    vector<vector<int>> rebuildedG(N);
+    set<pair<int, int>> connected;
+    for (int v = 0; v < N; v++) {
+      for (auto nv : G[v]) {
+        if (component[v] != component[nv] and !connected.count(pair(v, nv))) {
+          connected.insert(pair(v, nv));
+          rebuildedG[component[v]].push_back(component[nv]);
+        }
+      }
+    }
+    return rebuildedG;
+  }
 };
