@@ -1,10 +1,10 @@
 // 行列演算
 const ll MOD = 1e9+7;
-#define mat vector<vector<int>>
+#define mat vector<vector<long long>>
 
 /// 行列積
 mat mat_mul(mat &a, mat &b) {
-  mat res(a.size(), vector<int>(b[0].size()));
+  mat res(a.size(), vector<long long>(b[0].size()));
   for (int i = 0; i < a.size(); i++) {
     for (int j = 0; j < b[0].size(); j++) {
       for (int k = 0; k < b.size(); k++) {
@@ -17,10 +17,9 @@ mat mat_mul(mat &a, mat &b) {
 
 /// 行列累乗
 mat mat_pow(mat a, long long n) {
-  mat res(a.size(), vector<int>(a.size()));
+  mat res(a.size(), vector<long long>(a.size()));
   // 単位行列で初期化
-  for (int i = 0; i < a.size(); i++)
-    res[i][i] = 1;
+  for (int i = 0; i < a.size(); i++) res[i][i] = 1;
   // 繰り返し二乗法
   while (n > 0) {
     if (n & 1) res = mat_mul(a, res);
